@@ -1,0 +1,34 @@
+<!-- app.component.html -->
+
+<ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Nextplore</ion-title>
+      </ion-toolbar>
+      <ion-segment value="{{ currentView }}">
+        <ion-segment-button value="lugares" (click)="showLugares()">
+          <ion-label>Lugares</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="usuarios" (click)="showUsuarios()">
+          <ion-label>Usuarios</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="explorados" (click)="showExplorados()">
+          <ion-label>Explorados</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-header>
+  
+    <ion-content>
+      <ng-container *ngIf="currentView === 'lugares'">
+        <app-lugar-list></app-lugar-list>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'usuarios'">
+        <app-usuario-list></app-usuario-list>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'explorados'">
+        <app-explorado-list></app-explorado-list>  
+      </ng-container>
+      
+    </ion-content>
+  </ion-app>
+  

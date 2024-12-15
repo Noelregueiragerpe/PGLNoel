@@ -1,0 +1,94 @@
+/* lugares.component.scss */
+
+/* Fondo general */
+ion-content {
+    --background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Fondo gradiente azul claro */
+    padding: 16px;
+  }
+  
+  /* Barra de herramientas */
+  ion-toolbar {
+    --background: #4a5c92; /* Azul oscuro */
+    --color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botón de añadir */
+  ion-button {
+    --color: #ffffff;
+    --background: #ff7043; /* Naranja */
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  ion-button:hover {
+    --background: #e64a19; /* Naranja más oscuro */
+    transform: scale(1.1);
+  }
+  
+  /* Tabla de Lugares */
+  ion-grid {
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 12px;
+    margin: 16px auto;
+    padding: 16px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    max-width: 900px; /* Centra y ajusta el ancho */
+  }
+  
+  /* Fila de encabezado */
+  ion-row:first-child {
+    background: #4a5c92; /* Fondo azul oscuro */
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  
+  /* Celdas */
+  ion-col {
+    text-align: center; /* Centra el contenido */
+    color: #4a5c92; /* Azul oscuro */
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  /* Fila de datos */
+  ion-row:nth-child(even) {
+    background: #f9fafb; /* Azul claro para alternar */
+  }
+  
+  ion-row:nth-child(odd) {
+    background: #ffffff; /* Blanco */
+  }
+  
+  ion-row:hover {
+    background: #e3f2fd; /* Azul claro interactivo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botones en las filas */
+  ion-button {
+    --background: transparent; /* Sin fondo por defecto */
+    --color: #4a5c92; /* Azul intermedio para iconos */
+    border-radius: 4px;
+  }
+  
+  ion-button:hover {
+    --background: #4a5c92; /* Azul oscuro al pasar el ratón */
+    --color: #ffffff; /* Texto blanco */
+  }
+  
+  /* Botón de eliminar */
+  ion-button[color="danger"] {
+    --color: #e53935; /* Rojo */
+    --background: transparent;
+  }
+  
+  ion-button[color="danger"]:hover {
+    --background: #e53935; /* Fondo rojo intenso */
+    --color: #ffffff; /* Texto blanco */
+  }
+  

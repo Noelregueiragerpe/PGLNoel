@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lugares</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addLugar()">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        Añadir
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2"><strong>Nombre</strong></ion-col>
+      <ion-col size="2"><strong>Ciudad</strong></ion-col>
+      <ion-col size="2"><strong>Coord. X</strong></ion-col>
+      <ion-col size="2"><strong>Coord. Y</strong></ion-col>
+      <ion-col size="2"><strong>Categoria</strong></ion-col>
+    </ion-row>
+    
+    <ion-row *ngFor="let lugar of lugares">
+      <ion-col size="2">{{ lugar.nombre }}</ion-col>
+      <ion-col size="2">{{ lugar.ciudad }}</ion-col>
+      <ion-col size="2">{{ lugar.coordenadasx }}</ion-col>
+      <ion-col size="2">{{ lugar.coordenadasy }}</ion-col>
+      <ion-col size="2">{{ lugar.categoria }}</ion-col>
+      <ion-col>
+        <ion-button size="small" (click)="editLugar(lugar)">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button size="small" color="danger" (click)="deleteLugar(lugar.id!)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,44 @@
+/* ingrediente-list.component.scss */
+
+/* Fondo general */
+ion-content {
+    --background: #ececec; /* Azul claro */
+  }
+  
+  /* Barra de herramientas */
+  ion-toolbar {
+    --background: #293968; /* Azul intenso */
+    --color: #ececec; /* Texto blanco */
+  }
+  
+  /* Botones en la barra de herramientas */
+  ion-button {
+    --color: #ececec; /* Texto blanco */
+  }
+  
+  /* Estilo de los elementos en la lista */
+  ion-list {
+    background: #ececec;
+    border-radius: 8px;
+    margin: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-item {
+    --background: #ececec; /* Fondo azul claro */
+    border-bottom: 1px solid #293968; /* Línea divisoria */
+  }
+  
+  ion-label {
+    color: #293968; /* Texto azul oscuro */
+  }
+  
+  /* Botones en los ítems */
+  ion-button {
+    --color: #; /* Icono azul */
+  }
+  
+  ion-button[color="danger"] {
+    --color: #f4a01b; /* Botón rojo para eliminar */
+  }
+  

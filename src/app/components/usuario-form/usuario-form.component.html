@@ -1,0 +1,35 @@
+<!-- usuario-form.component.html -->
+
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        {{ usuario ? 'Editar Usuario' : 'Nuevo Usuario' }}
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="dismiss()">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup]="usuarioForm">
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Correo</ion-label>
+        <ion-input formControlName="correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contrasena</ion-label>
+        <ion-input formControlName="contrasena"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="saveUsuario()" [disabled]="usuarioForm.invalid">
+        Guardar
+      </ion-button>
+    </form>
+  </ion-content>
+  

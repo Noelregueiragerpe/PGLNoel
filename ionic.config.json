@@ -1,0 +1,7 @@
+{
+  "name": "NextploreApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

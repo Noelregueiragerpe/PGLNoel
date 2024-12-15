@@ -1,0 +1,50 @@
+<!-- lugar-form.component.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ lugar ? 'Editar Lugar' : 'Nuevo Lugar' }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="lugarForm">
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="name" formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Ciudad</ion-label>
+      <ion-input type="name" formControlName="ciudad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Coordenadas X</ion-label>
+      <ion-input type="name" formControlName="coordenadasx"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Coordenadas Y</ion-label>
+      <ion-input type="name" formControlName="coordenadasy"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Categoría</ion-label>
+      <ion-select formControlName="categoria" okText="Aceptar" cancelText="Cancelar">
+        <ion-select-option *ngFor="let categoria of categoriasDisponibles" [value]="categoria">
+          {{ categoria }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" (click)="saveLugar()" [disabled]="lugarForm.invalid">
+      Guardar
+    </ion-button>
+  </form>
+</ion-content>
